@@ -18,10 +18,10 @@ function createDreamTeam(members) {
     for (let i = 0; i < members.length; i++) {
         if (typeof members[i] === 'string') {
             team.push(members[i]);
-        }
-
-        team.sort();
-        let team_fin = team.map((word) => word[0]).join('');
+        } else
+            team.sort();
+        team_fin = team.map((word) => word[0]).join('');
+        team_fin.toUpperCase();
     }
     return team_fin
 }
